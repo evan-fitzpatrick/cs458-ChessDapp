@@ -14,7 +14,7 @@ const provider = waffle.provider;
 // `describe` receives the name of a section of your test suite, and a callback.
 // The callback must define the test of that section. This callback can't be
 // an async function.
-
+/*
 
 describe("Cryptozombies", function () {
     // Mocha has four functions that let you hook into the the test runner's
@@ -118,4 +118,4 @@ describe("Cryptozombies", function () {
         })
     })
 
-})
+})*/
