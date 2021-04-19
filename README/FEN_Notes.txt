@@ -1,0 +1,59 @@
+Forsyth-Edwards Notation (FEN)
+
+Examples:
+
+    Starting Position (no moves made)...
+
+        rnbqkbnr/pppppppp/8/8/8/8/pppppppp/RNBQKBNR w KQkq - 0 1
+    
+    White moves knight to c3...
+    
+        rnbqkbnr/pppppppp/8/8/8/2N5/pppppppp/R1BQKBNR b KQkq - 1 1
+    
+    Black moves pawn to e5...
+    
+        rnbqkbnr/pppp1ppp/8/4p3/8/2N5/pppppppp/R1BQKBNR w KQkq e6 2 2
+    
+    White moves pawn to f3...
+    
+        rnbqkbnr/pppp1ppp/8/4p3/8/2N2N2/pppppppp/R1BQKB1R b KQkq - 3 2
+    
+First Argument:
+    The first argument lists the placement of pieces on the board. Pieces are listed 
+    starting with the eighth rank first file (top left corner) and progressing by ranks 
+    to the first rank eighth file (bottom right corner). Lowercase letters describe black 
+    pieces, uppercase letters describe white pieces. Empty squares are denoted by numbers 
+    listing the number of empty squares.
+
+Second Argument:
+    The second argument indicates who has next move. This argument will always be lowercase,
+    "w" for white, "b" for black.
+
+Third Argument:
+    The third argument indicates castling ability. White uppercase letters followed by
+    black lowercase letters. "K" for kingside followed by "Q" for queenside. If no castling 
+    is available, then the argument is shown as "-".
+
+Forth Argument:
+    The forth argument lists en passant targets. If a pawn makes an initial two square advance 
+    and is eligible for an en passant capture, then the forth argument lists the square behind 
+    the pawn (the square the pawn moved over) that is an eligible move. If no en passant captures 
+    are available, then the argument is shown as "-".
+
+Fifth Argument:
+    The fifth argument counts the number of half moves both players have made since the last pawn 
+    advance or piece capture. This argument is useful for enforcing the 50 move draw rule. When 
+    the counter reaches 100 (each player has made 50 moves) the game ends in a draw.
+
+Sixth Argument:
+    The sixth argument counts the number of full moves completed in the game. This counter is 
+    incremented by one every time black makes a move. This counter starts at 1.
+
+Problems with this Notation:
+    FEN does not provide enough information to decide whether or not a draw by threefold 
+    repetition may be offered or accepted.
+
+References:
+    https://www.chess.com/terms/fen-chess
+    http://kirill-kryukov.com/chess/doc/fen.html
+    
