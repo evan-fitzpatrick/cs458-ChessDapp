@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Chessboard from "chessboardjsx";
 
 class Greeting extends Component {
   render() {
@@ -18,7 +17,7 @@ class Greeting extends Component {
           Welcome to the CSU <b> CryptoZombies</b> game!
         </h2>
         <br />
-        <Chessboard position="start"/>
+        <img src="static/images/zombieLoser2.jpg" style={imgStyle} width="400px" alt="Zombie rising from grave" />
         <br /> <br />
         <p style={{ textAlign: "center" }}>
           This Colorado State University CS458 blockchain game allows you to create one original zombie
