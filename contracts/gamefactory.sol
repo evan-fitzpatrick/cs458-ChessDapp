@@ -45,7 +45,7 @@ contract GameFactory is Ownable {
     mapping (uint => address[2]) public gameToPlayers;
     mapping (address => uint) ownerGameCount;
 
-    function _createGame(address _player2) internal {
+    function createGame(address _player2) public {
         uint id = games.push(ChessGame(startingBoard, msg.sender, _player2, true)) - 1;
         gameToOwner[id] = msg.sender;
         gameToPlayers[id] = [msg.sender, _player2];
