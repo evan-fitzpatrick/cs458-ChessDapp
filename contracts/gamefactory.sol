@@ -10,7 +10,7 @@ contract GameFactory is Ownable {
     using SafeMath16 for uint16;
     using SafeMath8 for uint8;
 
-    event NewGame(uint zombieId, string name, uint dna);
+    event NewGame(uint gameId, address owner, address opponent);
 
     //Using integers to represent pieces.
     // 0 = blank square
@@ -42,18 +42,14 @@ contract GameFactory is Ownable {
     ChessGame[] public games;
 
     mapping (uint => address) public gameToOwner;
-    mapping (uint => address[2]) public gateToPlayers;
+    mapping (uint => address[2]) public gameToPlayers;
     mapping (address => uint) ownerGameCount;
-
-    function setCooldownTime(uint _seconds) public onlyOwner {
-        cooldownTime = _seconds;
-    }
 
     function _createGame(address _player2) internal {
         uint id = games.push(ChessGame(startingBoard, msg.sender, _player2, true)) - 1;
-        gameToOwner[id] = [msg.sender];
+        gameToOwner[id] = msg.sender;
         gameToPlayers[id] = [msg.sender, _player2];
         ownerGameCount[msg.sender] = ownerGameCount[msg.sender].add(1);
-        emit NewGame(id, _player2);
+        emit NewGame(id, msg.sender, _player2);
     }
 }
