@@ -57,12 +57,12 @@ describe("ChessGame", function () {
     });
 
 
-    describe("Simple zombie ownership and transfer", function () {
+    describe("Simple game ownership and transfer", function () {
         it("should transfer a zombie", async () => {
-            const result = await CGInstance.createRandomZombie(zombieNames[0]);
-            const zombieId = 0;
-            await CGInstance.transferFrom(alice.address, bob.address, zombieId);
-            const newOwner = await CGInstance.ownerOf(zombieId);
+            const result = await CGInstance.createGame(alice.address);
+            const gameId = 0;
+            await CGInstance.transferFrom(alice.address, bob.address, gameId);
+            const newOwner = await CGInstance.ownerOf(gameId);
             expect(newOwner).to.equal(bob.address);
         })
     });
