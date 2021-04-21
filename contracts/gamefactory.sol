@@ -10,7 +10,7 @@ contract GameFactory is Ownable {
     using SafeMath16 for uint16;
     using SafeMath8 for uint8;
 
-    event NewGame(uint gameId, address owner, address opponent);
+    event NewGame(uint gameId, address owner, address player1, address player2);
 
     //Using integers to represent pieces.
     // 0 = blank square
@@ -35,7 +35,8 @@ contract GameFactory is Ownable {
     struct ChessGame {
         uint8[8][8] board;
         address owner;
-        address opponent;
+        address player1;
+        address player2;
         bool whitesTurn;
     }
 
@@ -45,11 +46,11 @@ contract GameFactory is Ownable {
     mapping (uint => address[2]) public gameToPlayers;
     mapping (address => uint) ownerGameCount;
 
-    function createGame(address _player2) public {
-        uint id = games.push(ChessGame(startingBoard, msg.sender, _player2, true)) - 1;
+    function createGame(address _player1, address _player2) public {
+        uint id = games.push(ChessGame(startingBoard, msg.sender, _player1, _player2, true)) - 1;
         gameToOwner[id] = msg.sender;
-        gameToPlayers[id] = [msg.sender, _player2];
+        gameToPlayers[id] = [_player1, _player2];
         ownerGameCount[msg.sender] = ownerGameCount[msg.sender].add(1);
-        emit NewGame(id, msg.sender, _player2);
+        emit NewGame(id, msg.sender, _player1, _player2);
     }
 }
