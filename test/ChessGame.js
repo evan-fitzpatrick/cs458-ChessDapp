@@ -68,49 +68,22 @@ describe("ChessGame", function () {
     });
 
     describe("Two-step transfer scenario", async () => {
-        it("should approve and then transfer a zombie when the approved address calls transferFrom", async () => {
-            const result = await CGInstance.createRandomZombie(zombieNames[0]);
-            const zombieId = 0;
-            await CGInstance.approve(bob.address, zombieId);
-            await CGInstance.connect(bob).transferFrom(alice.address, bob.address, zombieId);
-            const newOwner = await CGInstance.ownerOf(zombieId);
+        it("should approve and then transfer a game when the approved address calls transferFrom", async () => {
+            const result = await CGInstance.createGame(alice.address);
+            const gameId = 0;
+            await CGInstance.approve(bob.address, gameId);
+            await CGInstance.connect(bob).transferFrom(alice.address, bob.address, gameId);
+            const newOwner = await CGInstance.ownerOf(gameId);
             expect(newOwner).to.equal(bob.address);
         })
 
-        it("should approve and then transfer a zombie when the owner calls transferFrom", async () => {
-            const result = await CGInstance.createRandomZombie(zombieNames[0]);
-            const zombieId = 0;
-            await CGInstance.approve(bob.address, zombieId);
-            await CGInstance.transferFrom(alice.address, bob.address, zombieId);
-            const newOwner = await CGInstance.ownerOf(zombieId);
+        it("should approve and then transfer a game when the owner calls transferFrom", async () => {
+            const result = await CGInstance.createGame(alice.address);
+            const gameId = 0;
+            await CGInstance.approve(bob.address, gameId);
+            await CGInstance.transferFrom(alice.address, bob.address, gameId);
+            const newOwner = await CGInstance.ownerOf(gameId);
             expect(newOwner).to.equal(bob.address);
         })
     })
-
-     describe("attack scenarios", async () => {
-         it("zombie should be able to attack another zombie", async () => {
-            let result;
-
-            result = await CGInstance.setCooldownTime(0);  // so we don't have to wait
-            result = await CGInstance.createRandomZombie(zombieNames[0]);
-            const firstZombieId = 0;
-            result = await CGInstance.connect(bob).createRandomZombie(zombieNames[1]);
-            const secondZombieId = 1;
-            await CGInstance.attack(firstZombieId, secondZombieId);
-            const z = await CGInstance.zombies(0);
-            //console.log(z);
-            expect(z[4]+z[5]).to.equal(1);
-        })
-
-        it("should be able to feed on a cryptokitty and create a new zombie", async () => {
-            let result;
-            result = await CGInstance.setCooldownTime(0);  // so we don't have to wait
-            result = await CGInstance.createRandomZombie(zombieNames[0]);
-            const firstZombieId = 0;
-            await CGInstance.feedOnKitty(firstZombieId, 15);
-            const newZombie = await CGInstance.zombies(1);
-            expect (newZombie[0]).to.equal("NoName");
-        })
-    })
-
 })
