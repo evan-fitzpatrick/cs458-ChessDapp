@@ -26,7 +26,6 @@ describe("ChessGame", function () {
     // A common pattern is to declare some variables, and assign them in the
     // `before` and `beforeEach` callbacks.
 
-    const zombieNames = ["Zombie 1", "Zombie 2"];
     let CG;
     let CGInstance;
     let alice;
@@ -91,9 +90,16 @@ describe("ChessGame", function () {
         it("should initialize board to the correct value", async () => {
             const result = await CGInstance.createGame(alice.address, billy.address);
             const gameId = 0;
-            await CGInstance.transferFrom(alice.address, bob.address, gameId);
             const position = await CGInstance.getPosition(gameId);
             expect(position).to.equal("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1");
+        })
+
+        it("should be able to change the position of the board", async () => {
+            const result = await CGInstance.createGame(alice.address, billy.address);
+            const gameId = 0;
+            await CGInstance.setPosition(gameId, "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1");
+            const position = await CGInstance.getPosition(gameId);
+            expect(position).to.equal("rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1");
         })
     });
 })
