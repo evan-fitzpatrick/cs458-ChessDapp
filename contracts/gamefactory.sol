@@ -12,17 +12,6 @@ contract GameFactory is Ownable {
 
     event NewGame(uint gameId, address owner, address player1, address player2);
 
-    //Using integers to represent pieces.
-    // 0 = blank square
-    // 1 = pawn
-    // 2 = knight
-    // 3 = bishop
-    // 4 = rook
-    // 5 = queen
-    // 6 = king
-    // adding 8 makes it a black piece (e.g. 9 = (1 + 8), so that's a black pawn
-    // Might be a good idea to revise this for clarity later.
-
     string defaultPosition = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
 
     struct ChessGame {
