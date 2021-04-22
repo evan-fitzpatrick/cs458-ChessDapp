@@ -38,7 +38,7 @@ describe("ChessGame", function () {
 
     beforeEach(async function () {
         [alice, bob, billy] = await ethers.getSigners();
-        CG = await ethers.getContractFactory("CryptoZombies");
+        CG = await ethers.getContractFactory("ChessGame");
         CGInstance = await CG.deploy();
     });
 
