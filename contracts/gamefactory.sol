@@ -23,21 +23,14 @@ contract GameFactory is Ownable {
     // adding 8 makes it a black piece (e.g. 9 = (1 + 8), so that's a black pawn
     // Might be a good idea to revise this for clarity later.
 
-    uint8[8][8] startingBoard = [[12, 10, 11, 13, 14, 11, 10, 12],
-        [9, 9, 9, 9, 9, 9, 9, 9],
-        [0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0],
-        [1, 1, 1, 1, 1, 1, 1, 1],
-        [4, 2, 3, 5, 6, 3, 2, 4]];
+    string defaultPosition = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
 
     struct ChessGame {
-        uint8[8][8] board;
         address owner;
         address player1;
         address player2;
-        bool whitesTurn;
+
+        string position;
     }
 
     ChessGame[] public games;
@@ -47,7 +40,7 @@ contract GameFactory is Ownable {
     mapping (address => uint) ownerGameCount;
 
     function createGame(address _player1, address _player2) public {
-        uint id = games.push(ChessGame(startingBoard, msg.sender, _player1, _player2, true)) - 1;
+        uint id = games.push(ChessGame(msg.sender, _player1, _player2, defaultPosition)) - 1;
         gameToOwner[id] = msg.sender;
         gameToPlayers[id] = [_player1, _player2];
         ownerGameCount[msg.sender] = ownerGameCount[msg.sender].add(1);
