@@ -9,7 +9,7 @@ contract GameMove is GameHelper {
 
     }
 
-    function setPosition(uint _gameId, string memory position) external onlyPlayerOf(_gameId){
+    function setPosition(uint _gameId, string calldata position) external onlyPlayerOf(_gameId){
         games[_gameId].position = position;
     }
 }

@@ -86,4 +86,14 @@ describe("ChessGame", function () {
             expect(newOwner).to.equal(bob.address);
         })
     })
+
+    describe("Testing Position of the board", function () {
+        it("should initialize board to the correct value", async () => {
+            const result = await CGInstance.createGame(alice.address, billy.address);
+            const gameId = 0;
+            await CGInstance.transferFrom(alice.address, bob.address, gameId);
+            const position = await CGInstance.getPosition(gameId);
+            expect(position).to.equal("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1");
+        })
+    });
 })
