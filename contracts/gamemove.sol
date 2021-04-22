@@ -8,4 +8,8 @@ contract GameMove is GameHelper {
         //leaving this blank until FEN is implemented
 
     }
+
+    function setPosition(uint _gameId, string memory position) external onlyPlayerOf(_gameId){
+        games[_gameId].position = position;
+    }
 }
