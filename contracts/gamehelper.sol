@@ -21,4 +21,8 @@ contract GameHelper is GameModifiers {
         _owner.transfer(address(this).balance);
     }
 
+    function getPosition(uint _gameId) external view returns(string memory){
+        return games[_gameId].position;
+    }
+
 }

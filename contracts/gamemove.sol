@@ -4,18 +4,16 @@ import "./gamehelper.sol";
 
 contract GameMove is GameHelper {
 
-    function move(uint _gameId, uint8 _piece, uint8[2] _start, uint8[2] _destination) external onlyPlayerOf(_gameId) {
-        // _piece corresponds to type of piece being moved. (E.g. black pawn, white knight, black rook, etc.)
-        // Both _start and _destination are coordinate locations. (e.g. [0,0] = a1, [2,4] = c5)
+    event moveSuccessful(uint gameId, string gamePosition);
 
-        uint8[8][8] memory gameBoard = games[_gameId].board;
+    function move(uint _gameId) external onlyPlayerOf(_gameId) {
+        //leaving this blank until FEN parsing is implemented
 
-        require(_start[0] <= 7 && _start[1] <= 7 && _destination[0] <= 7 && _destination[1] <= 7); //Make sure move is on the board
-        require(gameBoard[_start[0]][_start[1]] == _piece); //Require board matches with desired move
+    }
 
-        //todo: logic to make sure move is allowed
-
-        games[_gameId].board[_start[0]][_start[1]] = 0;
-        games[_gameId].board[_destination[0]][_destination[1]] = _piece;
+    function setPosition(uint _gameId, string calldata _position) external onlyPlayerOf(_gameId){
+        //No validation to make sure that the position is valid, or follows from a legal move of previous position, yet
+        games[_gameId].position = _position;
+        emit moveSuccessful(_gameId, _position);
     }
 }
