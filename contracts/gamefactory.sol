@@ -16,8 +16,8 @@ contract GameFactory is Ownable {
 
     struct ChessGame {
         address owner;
-        address player1;
-        address player2;
+        address white;
+        address black;
 
         string position;
     }

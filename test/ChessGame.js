@@ -51,7 +51,7 @@ describe("ChessGame", function () {
                 //.withArgs(0, zombieNames[0], 8229335091878300);
             const x = await CGInstance.games(0);
             //console.log(x);
-            expect(x.player1).to.equal(alice.address);
+            expect(x.white).to.equal(alice.address);
         });
     });
 
