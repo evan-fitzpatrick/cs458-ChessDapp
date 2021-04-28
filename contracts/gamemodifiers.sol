@@ -12,7 +12,12 @@ contract GameModifiers is GameFactory {
     }
 
     modifier onlyPlayerOf(uint _gameId) {
-        require(msg.sender == gameToPlayers[_gameId][0] || msg.sender == gameToPlayers[_gameId][1]);
+        require(msg.sender == gameToPlayers[_gameId][games[_gameId].turn ? 1:0]); //ternary operator. 0 if false, 1 if true
+        _;
+    }
+
+    modifier onlyOracle(){
+        require(1==1); //Not sure how to make sure that an address is the oracle. Need to fix this later.
         _;
     }
 }

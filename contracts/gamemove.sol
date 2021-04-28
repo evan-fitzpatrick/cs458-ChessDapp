@@ -4,15 +4,13 @@ import "./gamehelper.sol";
 
 contract GameMove is GameHelper {
     event moveSuccessful(uint256 gameId, string gamePosition);
+    event requestMove(uint256 gameId, string gamePosition);
 
-    function move(uint256 _gameId) external onlyPlayerOf(_gameId) {
-        //leaving this blank until FEN parsing is implemented
+    function makeMove(uint256 _gameId, string calldata _position) external onlyPlayerOf(_gameId) {
+        emit requestMove(_gameId, _position);
     }
 
-    function setPosition(uint256 _gameId, string calldata _position)
-        external
-        onlyPlayerOf(_gameId)
-    {
+    function setPosition(uint256 _gameId, string calldata _position) external onlyOracle(){
         //No validation to make sure that the position is valid, or follows from a legal move of previous position, yet
         games[_gameId].position = _position;
         emit moveSuccessful(_gameId, _position);

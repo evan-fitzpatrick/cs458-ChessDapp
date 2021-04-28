@@ -16,9 +16,10 @@ contract GameFactory is Ownable {
 
     struct ChessGame {
         address owner;
-        address player1;
-        address player2;
+        address white;
+        address black;
 
+        bool turn;  //false for white true for black
         string position;
     }
 
@@ -28,11 +29,11 @@ contract GameFactory is Ownable {
     mapping (uint => address[2]) public gameToPlayers;
     mapping (address => uint) ownerGameCount;
 
-    function createGame(address _player1, address _player2) public {
-        uint id = games.push(ChessGame(msg.sender, _player1, _player2, defaultPosition)) - 1;
+    function createGame(address _white, address _black) public {
+        uint id = games.push(ChessGame(msg.sender, _white, _black, true, defaultPosition)) - 1;
         gameToOwner[id] = msg.sender;
-        gameToPlayers[id] = [_player1, _player2];
+        gameToPlayers[id] = [_white, _black];
         ownerGameCount[msg.sender] = ownerGameCount[msg.sender].add(1);
-        emit NewGame(id, msg.sender, _player1, _player2);
+        emit NewGame(id, msg.sender, _white, _black);
     }
 }
