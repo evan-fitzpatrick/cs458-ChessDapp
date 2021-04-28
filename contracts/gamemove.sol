@@ -7,7 +7,6 @@ contract GameMove is GameHelper {
     event requestMove(uint256 gameId, string gamePosition);
 
     function makeMove(uint256 _gameId, string calldata _position) external onlyPlayerOf(_gameId) {
-        //Todo: validate turns
         emit requestMove(_gameId, _position);
     }
 
