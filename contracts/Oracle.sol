@@ -2,7 +2,7 @@ pragma solidity >=0.5.0 <0.6.0;
 
 import "hardhat/console.sol";  // for debugging
 import "./AppContractInterface.sol";
-import "openzeppelin-solidity/contracts/ownership/Ownable.sol";  // to get the Ownable "onlyOwner" modifier
+import "./ownable.sol";  // to get the Ownable "onlyOwner" modifier
 
 
 contract Oracle is Ownable {
