@@ -15,8 +15,8 @@
     "chai": "^4.3.0",
     "ethereum-waffle": "^3.2.2",
     "ethers": "^5.0.31",
-    "hardhat": "^2.0.10"
-    "stockfish": "^11.0.0"
+    "hardhat": "^2.0.10",
+    "stockfish": "^11.0.0",
     "chess.js": "^0.11.0"
   }
 }
