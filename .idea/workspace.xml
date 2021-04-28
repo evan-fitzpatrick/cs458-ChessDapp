@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c0d413d4-c103-43fb-85fe-3c34258cfce6" name="Default" comment="Fixed Typo!">
+    <list default="true" id="c0d413d4-c103-43fb-85fe-3c34258cfce6" name="Default" comment="Fixed more bugs!">
+      <change afterPath="$PROJECT_DIR$/scripts/deployOld.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/Oracle.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/Oracle.sol" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +195,7 @@
       <workItem from="1614553658353" duration="45134000" />
       <workItem from="1615164729867" duration="273000" />
       <workItem from="1618513405813" duration="9298000" />
-      <workItem from="1619645008536" duration="924000" />
+      <workItem from="1619645008536" duration="1553000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Typo!">
       <created>1619645379761</created>
@@ -204,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619645379761</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fixed more bugs!">
+      <created>1619645961747</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1619645961747</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -271,7 +278,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fixed Typo!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Typo!" />
+    <MESSAGE value="Fixed more bugs!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed more bugs!" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/contracts/zombiefactory.sol">

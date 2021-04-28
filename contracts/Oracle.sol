@@ -14,7 +14,7 @@ contract Oracle is Ownable {
 
     // define events
     event GetLatestMoveEvent(string _proposedMove, string _fenString, address callerAddress, uint id);
-    event (string _fenString, string nextMove, address callerAddress, uint id);
+    event SetLatestMoveEvent(string _fenString, string nextMove, address callerAddress, uint id);
 
     // function to get the the next move from the Oracle server
     function getLatestMove(string memory _proposedMove, string memory _fenString) public returns (uint256) {
