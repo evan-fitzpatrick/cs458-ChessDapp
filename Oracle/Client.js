@@ -1,7 +1,7 @@
 const ethers = require('ethers');
 
 const SLEEP_INTERVAL = process.env.SLEEP_INTERVAL || 20000
-const AppContractJSON = require('../artifacts/contracts/AppContract.sol/AppContract.json')
+const AppContractJSON = require('../build/contracts/AppContract.sol/AppContract.json')
 
 
 // Set up event listeners.  This is how we get our data from the oracle!

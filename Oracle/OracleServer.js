@@ -1,7 +1,7 @@
 const Stockfish = require('stockfish');
 const { Chess } = require('chess.js');
 const ethers = require('ethers');
-const OracleJSON = require('../artifacts/contracts/Oracle.sol/Oracle.json')
+const OracleJSON = require('../build/contracts/Oracle.sol/Oracle.json')
 
 const SLEEP_INTERVAL        = process.env.SLEEP_INTERVAL || 3000
 const CHUNK_SIZE            = process.env.CHUNK_SIZE || 3
