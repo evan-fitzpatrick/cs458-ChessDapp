@@ -1,32 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c0d413d4-c103-43fb-85fe-3c34258cfce6" name="Default" comment="Fixed typo in Oracle.sol!">
-      <change beforePath="$PROJECT_DIR$/build/build-info/8f1215349980accf18c4b230f91b7582.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/build-info/d56b925e60f28aefcec2fe80b53b4747.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/CryptoZombies.sol/CryptoZombies.dbg.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/CryptoZombies.sol/CryptoZombies.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/erc721.sol/ERC721.dbg.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/erc721.sol/ERC721.dbg.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/ownable.sol/Ownable.dbg.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/ownable.sol/Ownable.dbg.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/safemath.sol/SafeMath.dbg.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/safemath.sol/SafeMath.dbg.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/safemath.sol/SafeMath.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/safemath.sol/SafeMath.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/safemath.sol/SafeMath16.dbg.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/safemath.sol/SafeMath16.dbg.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/safemath.sol/SafeMath16.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/safemath.sol/SafeMath16.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/safemath.sol/SafeMath32.dbg.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/safemath.sol/SafeMath32.dbg.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/safemath.sol/SafeMath32.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/safemath.sol/SafeMath32.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/zombieattack.sol/ZombieAttack.dbg.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/zombieattack.sol/ZombieAttack.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/zombiefactory.sol/ZombieFactory.dbg.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/zombiefactory.sol/ZombieFactory.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/zombiefeeding.sol/KittyInterface.dbg.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/zombiefeeding.sol/KittyInterface.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/zombiefeeding.sol/ZombieFeeding.dbg.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/zombiefeeding.sol/ZombieFeeding.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/zombiehelper.sol/ZombieHelper.dbg.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/zombiehelper.sol/ZombieHelper.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/zombieownership.sol/ZombieOwnership.dbg.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/zombieownership.sol/ZombieOwnership.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cache/solidity-files-cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/cache/solidity-files-cache.json" afterDir="false" />
+    <list default="true" id="c0d413d4-c103-43fb-85fe-3c34258cfce6" name="Default" comment="Fixed Client.js and OracleServer.js const AppContractJSON path.">
+      <change afterPath="$PROJECT_DIR$/scripts/deployOracle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,6 +156,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="/usr/local/lib/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -217,7 +195,7 @@
       <workItem from="1614553658353" duration="45134000" />
       <workItem from="1615164729867" duration="273000" />
       <workItem from="1618513405813" duration="9298000" />
-      <workItem from="1619645008536" duration="2246000" />
+      <workItem from="1619645008536" duration="5096000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Typo!">
       <created>1619645379761</created>
@@ -240,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619646591801</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fixed Client.js and OracleServer.js const AppContractJSON path.">
+      <created>1619649358558</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1619649358558</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -309,7 +294,8 @@
     <MESSAGE value="Fixed Typo!" />
     <MESSAGE value="Fixed more bugs!" />
     <MESSAGE value="Fixed typo in Oracle.sol!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed typo in Oracle.sol!" />
+    <MESSAGE value="Fixed Client.js and OracleServer.js const AppContractJSON path." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Client.js and OracleServer.js const AppContractJSON path." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/contracts/zombiefactory.sol">
