@@ -1,0 +1,3 @@
+The Oracle is a copy of Joe's temperature Oracle exmple.
+
+To run ...
