@@ -7,7 +7,7 @@ In terminal one...
   npm install
 
   (You may need to npm install stockfish and npm install chess.js
-  although, I think I have it set so it shouldn't be necessary.)
+  although, I think I have it set so that shouldn't be necessary.)
 
   npx hardhat compile
 
