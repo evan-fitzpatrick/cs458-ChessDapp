@@ -2,7 +2,7 @@ The Oracle is a copy of Joe's temperature Oracle example.
 In it's current state it needs three terminals to run.
 There is a Client.js to provide test input.
 
-In terminal one...
+In terminal one:
 
   npm install
 
@@ -13,17 +13,34 @@ In terminal one...
 
   npx hardhat node
   
-In terminal two...
+In terminal two:
   
   npx hardhat run --network localhost scripts/deployOracle.js
   
   node Oracle/OracleServer.js
   
-In terminal three...
+In terminal three:
   
   node Oracle/Client.js
   
 Like Joe's example the client and server should talk back and forth.
 Also, like Joe's example, the client sends requests every so many seconds,
-currently it is set at every 20 seconds so you may not see output
-right away.
+currently it is set at every 20 seconds so you won't see output
+right away. The server will validate moves with chess.js and ask Stockfish
+for the next move it would like to make. The server takes a move and
+a fenString and returns a fenString. If you want Stockfish to pick the next
+move send 'stockfish' as the next move. Example...
+
+Input:
+
+  'b1c3', 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1'
+  
+  or...
+  
+  'stockfish', 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1'
+  
+Output:
+
+  'rnbqkbnr/pppppppp/8/8/8/2N5/PPPPPPPP/R1BQKBNR b KQkq - 1 1'
+  
+  
