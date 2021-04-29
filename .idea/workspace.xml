@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c0d413d4-c103-43fb-85fe-3c34258cfce6" name="Default" comment="" />
+    <list default="true" id="c0d413d4-c103-43fb-85fe-3c34258cfce6" name="Default" comment="Fixed Client.js and OracleServer.js const AppContractJSON path.">
+      <change afterPath="$PROJECT_DIR$/scripts/deployOracle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,6 +25,11 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -141,12 +149,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="/usr/local/lib/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -154,6 +164,19 @@
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/test" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration" cleanupOnStartRun="true">
@@ -172,7 +195,37 @@
       <workItem from="1614553658353" duration="45134000" />
       <workItem from="1615164729867" duration="273000" />
       <workItem from="1618513405813" duration="9298000" />
+      <workItem from="1619645008536" duration="5096000" />
     </task>
+    <task id="LOCAL-00001" summary="Fixed Typo!">
+      <created>1619645379761</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1619645379761</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fixed more bugs!">
+      <created>1619645961747</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1619645961747</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Fixed typo in Oracle.sol!">
+      <created>1619646591801</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1619646591801</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fixed Client.js and OracleServer.js const AppContractJSON path.">
+      <created>1619649358558</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1619649358558</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -236,6 +289,13 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fixed Typo!" />
+    <MESSAGE value="Fixed more bugs!" />
+    <MESSAGE value="Fixed typo in Oracle.sol!" />
+    <MESSAGE value="Fixed Client.js and OracleServer.js const AppContractJSON path." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Client.js and OracleServer.js const AppContractJSON path." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/contracts/zombiefactory.sol">
