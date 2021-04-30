@@ -23,7 +23,7 @@ contract AppContract is Ownable {
     // so define a function to set the oracle contract address
 
     function setOracleInstanceAddress (address _oracleInstanceAddress) public onlyOwner {
-        console.log("setting oracle address");
+        console.log("        setting oracle address");
         oracleAddress = _oracleInstanceAddress;
         oracleInstance = OracleInterface(oracleAddress);
         emit newOracleAddressEvent(oracleAddress);
@@ -32,9 +32,9 @@ contract AppContract is Ownable {
     // Applications call this to fetch the dollar price of Ether.  It calls the oracle but can't return data yet.
 
     function requestNextMove(string memory _proposedMove, string memory _fenString) public {
-        console.log("calling Oracle:");
+        console.log("        calling Oracle:");
         uint256 id = oracleInstance.getLatestMove(_proposedMove, _fenString);  // oracle returns a unique ID to each request
-        console.log("new ID from oracle: ", id);  // debug output;  can delete this later.
+        console.log("        new ID from oracle: ", id);  // debug output;  can delete this later.
         myRequests[id] = true;
         emit ReceivedNewRequestIdEvent(id);
     }
@@ -44,10 +44,11 @@ contract AppContract is Ownable {
     // Then make sure the id number matches a request actually made by me.
     // Finally, set the price, delete the request from the pending list and emit an event that your app will listen for
 
-    function callback(string memory _fenString, string memory _nextMove, uint256 _id) public onlyOracle {
+    function callBack(string memory _fenString, string memory _nextMove, uint256 _id) public onlyOracle {
         require(myRequests[_id], "This request is not in my pending list.");
         nextMove = _nextMove; // Not sure what this line is doing?
         delete myRequests[_id];
+        console.log("move updated event");
         emit MoveUpdatedEvent(_fenString, nextMove, _id);
     }
 

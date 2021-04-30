@@ -22,7 +22,7 @@ contract Oracle is Ownable {
         uint id = uint(keccak256(abi.encodePacked(now, msg.sender, randNonce))) % modulus;
         pendingRequests[id] = true;  // keep track of legitimate requests using self-generated id number
         emit GetLatestMoveEvent(_proposedMove, _fenString, msg.sender, id);
-        console.log("ORACLE: emitting request to server for", msg.sender, "using ID", id);
+        console.log("        ORACLE: emitting request to server for", msg.sender, "using ID", id);
         return id;
     }
 
@@ -32,7 +32,8 @@ contract Oracle is Ownable {
         delete pendingRequests[_id];  // once serviced, delete the request to save storage
         AppContractInterface appContractInstance;
         appContractInstance = AppContractInterface(_callerAddress);
-        appContractInstance.callback(_fenString, _nextMove, _id);
+        appContractInstance.callBack(_fenString, _nextMove, _id);
+        console.log("ORACLE: setting latest move");
         emit SetLatestMoveEvent(_fenString, _nextMove, _callerAddress, _id);
     }
 }

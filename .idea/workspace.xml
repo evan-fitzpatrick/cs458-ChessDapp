@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0d413d4-c103-43fb-85fe-3c34258cfce6" name="Default" comment="Fixed Client.js and OracleServer.js const AppContractJSON path.">
-      <change afterPath="$PROJECT_DIR$/scripts/deployOracle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/solidity-files-cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/cache/solidity-files-cache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/AppContract.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/AppContract.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/AppContractInterface.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/AppContractInterface.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/Oracle.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/Oracle.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ChessGame.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ChessGame.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,6 +152,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -196,6 +202,8 @@
       <workItem from="1615164729867" duration="273000" />
       <workItem from="1618513405813" duration="9298000" />
       <workItem from="1619645008536" duration="5096000" />
+      <workItem from="1619715656916" duration="4671000" />
+      <workItem from="1619738761270" duration="19122000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Typo!">
       <created>1619645379761</created>
