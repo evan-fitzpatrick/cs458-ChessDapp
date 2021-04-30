@@ -28,6 +28,10 @@ describe("ChessGame", function () {
 
     let CG;
     let CGInstance;
+    let AppContractFactory;
+    let AppInstance;
+    let OracleContractFactory;
+    let OracleInstance;
     let alice;
     let bob;
     let billy;
@@ -40,6 +44,10 @@ describe("ChessGame", function () {
         [alice, bob, billy] = await ethers.getSigners();
         CG = await ethers.getContractFactory("ChessGame");
         CGInstance = await CG.deploy();
+        AppContractFactory = await ethers.getContractFactory("AppContract");
+        AppInstance = await AppContractFactory.deploy();
+        OracleContractFactory = await ethers.getContractFactory("Oracle");
+        OracleInstance = await OracleContractFactory.deploy();
     });
 
 
@@ -101,5 +109,40 @@ describe("ChessGame", function () {
             const position = await CGInstance.getPosition(gameId);
             expect(position).to.equal("rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1");
         })
+    })
+
+    describe("Application Contract should call Oracle", function () {
+        it ("Should emit event when setting oracle contract address", async () => {
+            await expect(AppInstance.setOracleInstanceAddress(OracleInstance.address))
+                .to.emit(AppInstance,'newOracleAddressEvent')
+                .withArgs(OracleInstance.address);
+        })
+
+        it("Should emit a GOT NEW REQUEST message", async () => {
+            const _fenString = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
+            const _nextMove = 'rnbqkbnr/pppppppp/8/8/8/2N5/PPPPPPPP/R1BQKBNR b KQkq - 1 1';
+            await AppInstance.setOracleInstanceAddress(OracleInstance.address);
+            //await expect(AppInstance.updateEthPrice())
+            await expect(AppInstance.requestNextMove('b1c3',_fenString))
+                .to.emit(AppInstance, 'ReceivedNewRequestIdEvent')
+        })
+    })
+/*
+    describe("Oracle Contract should call Application Contract", function () {
+        it("Should emit a MOVE UPDATED EVENT message", async () => {
+            await AppInstance.setOracleInstanceAddress(OracleInstance.address);
+            const _proposedMove = 'b1c3';
+            const _fenString = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
+            const _nextMove = 'rnbqkbnr/pppppppp/8/8/8/2N5/PPPPPPPP/R1BQKBNR b KQkq - 1 1';
+            const _callerAddress = alice.address;
+            const id = OracleInstance.getLatestMove(_proposedMove, _fenString);
+            console.log(id);
+            console.log(_callerAddress);
+            console.log(OracleInstance.address);
+            await expect(OracleInstance.setLatestMove(_fenString, _nextMove, _callerAddress, 1234))
+                .to.emit(AppInstance, 'MoveUpdatedEvent')
+
+        })
     });
+*/
 })
