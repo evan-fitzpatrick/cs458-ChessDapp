@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0d413d4-c103-43fb-85fe-3c34258cfce6" name="Default" comment="Fixed Client.js and OracleServer.js const AppContractJSON path.">
-      <change afterPath="$PROJECT_DIR$/scripts/deployOracle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/solidity-files-cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/cache/solidity-files-cache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/AppContract.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/AppContract.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/Oracle.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/Oracle.sol" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,19 +167,6 @@
       <recent name="$PROJECT_DIR$/test" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration" cleanupOnStartRun="true">
     <configuration>$USER_HOME$/.subversion</configuration>
@@ -196,6 +185,7 @@
       <workItem from="1615164729867" duration="273000" />
       <workItem from="1618513405813" duration="9298000" />
       <workItem from="1619645008536" duration="5096000" />
+      <workItem from="1619788317279" duration="282000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Typo!">
       <created>1619645379761</created>
