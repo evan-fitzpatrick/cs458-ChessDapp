@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c0d413d4-c103-43fb-85fe-3c34258cfce6" name="Default" comment="Fixed Client.js and OracleServer.js const AppContractJSON path.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cache/solidity-files-cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/cache/solidity-files-cache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/AppContract.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/AppContract.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/AppContractInterface.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/AppContractInterface.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/Oracle.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/Oracle.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ChessGame.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ChessGame.js" afterDir="false" />
-    </list>
+    <list default="true" id="c0d413d4-c103-43fb-85fe-3c34258cfce6" name="Default" comment="Fixed Client.js and OracleServer.js const AppContractJSON path." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="Wayne_Oracle_Stockfish_and_Validation" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -152,6 +145,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
