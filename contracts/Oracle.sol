@@ -22,7 +22,7 @@ contract Oracle is Ownable {
         uint id = uint(keccak256(abi.encodePacked(now, msg.sender, randNonce))) % modulus;
         pendingRequests[id] = true;  // keep track of legitimate requests using self-generated id number
         emit GetLatestMoveEvent(_proposedMove, _fenString, msg.sender, id);
-        console.log("ORACLE: emitting request to server for", msg.sender, "using ID", id);
+        //console.log("ORACLE: emitting request to server for", msg.sender, "using ID", id);
         return id;
     }
 

@@ -23,7 +23,7 @@ contract AppContract is Ownable {
     // so define a function to set the oracle contract address
 
     function setOracleInstanceAddress (address _oracleInstanceAddress) public onlyOwner {
-        console.log("setting oracle address");
+        //console.log("setting oracle address");
         oracleAddress = _oracleInstanceAddress;
         oracleInstance = OracleInterface(oracleAddress);
         emit newOracleAddressEvent(oracleAddress);
@@ -32,9 +32,9 @@ contract AppContract is Ownable {
     // Applications call this to fetch the dollar price of Ether.  It calls the oracle but can't return data yet.
 
     function requestNextMove(string memory _proposedMove, string memory _fenString) public {
-        console.log("calling Oracle:");
+        //console.log("calling Oracle:");
         uint256 id = oracleInstance.getLatestMove(_proposedMove, _fenString);  // oracle returns a unique ID to each request
-        console.log("new ID from oracle: ", id);  // debug output;  can delete this later.
+        //console.log("new ID from oracle: ", id);  // debug output;  can delete this later.
         myRequests[id] = true;
         emit ReceivedNewRequestIdEvent(id);
     }
