@@ -70,8 +70,8 @@
       ]
     },
     "/home/wayne/IdeaProjects/cs458-ChessDapp/contracts/AppContract.sol": {
-      "lastModificationDate": 1619788308502,
-      "contentHash": "92c21e48acf965bea5065b12c8ca74a2",
+      "lastModificationDate": 1619788596122,
+      "contentHash": "7f041f692d778707806b7aec4f94254b",
       "sourceName": "contracts/AppContract.sol",
       "solcConfig": {
         "version": "0.5.1",
@@ -176,8 +176,8 @@
       ]
     },
     "/home/wayne/IdeaProjects/cs458-ChessDapp/contracts/Oracle.sol": {
-      "lastModificationDate": 1619788308503,
-      "contentHash": "db0c1d8078fdf6058087ea591ea9009e",
+      "lastModificationDate": 1619788596110,
+      "contentHash": "9563df6fcc55f35502558fc26eba984a",
       "sourceName": "contracts/Oracle.sol",
       "solcConfig": {
         "version": "0.5.1",
