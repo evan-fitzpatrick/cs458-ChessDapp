@@ -101,7 +101,7 @@ describe("ChessGame", function () {
             const position = await CGInstance.getPosition(gameId);
             expect(position).to.equal("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1");
         })
-
+/*
         it("should be able to change the position of the board", async () => {
             const result = await CGInstance.createGame(alice.address, billy.address);
             const gameId = 0;
@@ -109,6 +109,31 @@ describe("ChessGame", function () {
             const position = await CGInstance.getPosition(gameId);
             expect(position).to.equal("rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1");
         })
+*/
+
+        it("should be able to change the position of the board", async () => {
+            const result = await CGInstance.createGame(alice.address, billy.address);
+            const gameId = 0;
+            console.log("Test 1");
+            await CGInstance.setPosition(gameId, "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1");
+            console.log("Iest 2");
+            const position = await CGInstance.getPosition(gameId);
+            console.log(position);
+            expect(position).to.equal("rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1");
+        })
+
+/*
+        it("should be able to make a move", async () => {
+            const result = await CGInstance.createGame(alice.address, billy.address);
+            const gameId = 0;
+            console.log("Test 1");
+            await CGInstance.makeMove(gameId, "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1");
+            console.log("Test 2");
+            const position = await CGInstance.getPosition(gameId);
+            console.log(position);
+            expect(position).to.equal("rnbqkbnr/pppppppp/8/8/8/2N5/PPPPPPPP/R1BQKBNR b KQkq - 1 1");
+        })
+*/
     })
 
     describe("Application Contract should call Oracle", function () {
