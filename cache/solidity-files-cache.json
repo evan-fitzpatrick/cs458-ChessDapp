@@ -1,77 +1,9 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/home/wayne/IdeaProjects/cs458-ChessDapp/contracts/ownable.sol": {
-      "lastModificationDate": 1619645006781,
-      "contentHash": "dc3caf2e5c7f5201fb684bfef49413a6",
-      "sourceName": "contracts/ownable.sol",
-      "solcConfig": {
-        "version": "0.5.1",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.5.0 <0.6.0"
-      ],
-      "artifacts": [
-        "Ownable"
-      ]
-    },
-    "/home/wayne/IdeaProjects/cs458-ChessDapp/contracts/erc721.sol": {
-      "lastModificationDate": 1619645006781,
-      "contentHash": "7155a007b3daf1b2f3b780fc4769c72c",
-      "sourceName": "contracts/erc721.sol",
-      "solcConfig": {
-        "version": "0.5.1",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.5.0 <0.6.0"
-      ],
-      "artifacts": [
-        "ERC721"
-      ]
-    },
-    "/home/wayne/IdeaProjects/cs458-ChessDapp/contracts/AppContract.sol": {
-      "lastModificationDate": 1619788596122,
-      "contentHash": "7f041f692d778707806b7aec4f94254b",
+    "C:\\Users\\School\\Documents\\Classes\\Spring2021\\CS458_Blockchain\\final_project\\latest_code\\cs458-ChessDapp\\contracts\\AppContract.sol": {
+      "lastModificationDate": 1619883028346,
+      "contentHash": "f119802ca9bca667d9326148bd93388e",
       "sourceName": "contracts/AppContract.sol",
       "solcConfig": {
         "version": "0.5.1",
@@ -107,8 +39,8 @@
         "AppContract"
       ]
     },
-    "/home/wayne/IdeaProjects/cs458-ChessDapp/node_modules/hardhat/console.sol": {
-      "lastModificationDate": 1619788414855,
+    "C:\\Users\\School\\Documents\\Classes\\Spring2021\\CS458_Blockchain\\final_project\\latest_code\\cs458-ChessDapp\\node_modules\\hardhat\\console.sol": {
+      "lastModificationDate": 1619884778465,
       "contentHash": "cc4777addd464ea56fa35b1c45df0591",
       "sourceName": "hardhat/console.sol",
       "solcConfig": {
@@ -141,9 +73,9 @@
         "console"
       ]
     },
-    "/home/wayne/IdeaProjects/cs458-ChessDapp/contracts/OracleInterface.sol": {
-      "lastModificationDate": 1619788308503,
-      "contentHash": "b8c970adb6ec322f6c0797a199ca853f",
+    "C:\\Users\\School\\Documents\\Classes\\Spring2021\\CS458_Blockchain\\final_project\\latest_code\\cs458-ChessDapp\\contracts\\OracleInterface.sol": {
+      "lastModificationDate": 1619883028346,
+      "contentHash": "f72321be1a35604fe3449725e62cf7b4",
       "sourceName": "contracts/OracleInterface.sol",
       "solcConfig": {
         "version": "0.5.1",
@@ -175,9 +107,43 @@
         "OracleInterface"
       ]
     },
-    "/home/wayne/IdeaProjects/cs458-ChessDapp/contracts/Oracle.sol": {
-      "lastModificationDate": 1619788596110,
-      "contentHash": "9563df6fcc55f35502558fc26eba984a",
+    "C:\\Users\\School\\Documents\\Classes\\Spring2021\\CS458_Blockchain\\final_project\\latest_code\\cs458-ChessDapp\\contracts\\ownable.sol": {
+      "lastModificationDate": 1619883028346,
+      "contentHash": "381827b52681b37cd56f275ee2c685e3",
+      "sourceName": "contracts/ownable.sol",
+      "solcConfig": {
+        "version": "0.5.1",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0 <0.6.0"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
+    },
+    "C:\\Users\\School\\Documents\\Classes\\Spring2021\\CS458_Blockchain\\final_project\\latest_code\\cs458-ChessDapp\\contracts\\Oracle.sol": {
+      "lastModificationDate": 1619883028346,
+      "contentHash": "f60c4461dcc19b68c1ca0ceb3cfe1387",
       "sourceName": "contracts/Oracle.sol",
       "solcConfig": {
         "version": "0.5.1",
@@ -213,9 +179,9 @@
         "Oracle"
       ]
     },
-    "/home/wayne/IdeaProjects/cs458-ChessDapp/contracts/AppContractInterface.sol": {
-      "lastModificationDate": 1619788308502,
-      "contentHash": "b916373a2d97adb56adc2e966e3cf87a",
+    "C:\\Users\\School\\Documents\\Classes\\Spring2021\\CS458_Blockchain\\final_project\\latest_code\\cs458-ChessDapp\\contracts\\AppContractInterface.sol": {
+      "lastModificationDate": 1619883028346,
+      "contentHash": "393d7a65d0aeea612bb3258a7f34d7d7",
       "sourceName": "contracts/AppContractInterface.sol",
       "solcConfig": {
         "version": "0.5.1",
@@ -247,9 +213,9 @@
         "AppContractInterface"
       ]
     },
-    "/home/wayne/IdeaProjects/cs458-ChessDapp/contracts/gamefactory.sol": {
-      "lastModificationDate": 1619788308503,
-      "contentHash": "a0b47aa0247bb52ce33958540ca122a1",
+    "C:\\Users\\School\\Documents\\Classes\\Spring2021\\CS458_Blockchain\\final_project\\latest_code\\cs458-ChessDapp\\contracts\\gamefactory.sol": {
+      "lastModificationDate": 1619883028346,
+      "contentHash": "aeceb712482c2c4c54b8aa6c2849e229",
       "sourceName": "contracts/gamefactory.sol",
       "solcConfig": {
         "version": "0.5.1",
@@ -284,9 +250,9 @@
         "GameFactory"
       ]
     },
-    "/home/wayne/IdeaProjects/cs458-ChessDapp/contracts/safemath.sol": {
-      "lastModificationDate": 1619788308503,
-      "contentHash": "0ef51fdc6c39c45a88004259a60d1857",
+    "C:\\Users\\School\\Documents\\Classes\\Spring2021\\CS458_Blockchain\\final_project\\latest_code\\cs458-ChessDapp\\contracts\\safemath.sol": {
+      "lastModificationDate": 1619883028346,
+      "contentHash": "4c85ccbb06dccaeee2f1925622edba92",
       "sourceName": "contracts/safemath.sol",
       "solcConfig": {
         "version": "0.5.1",
@@ -321,9 +287,9 @@
         "SafeMath8"
       ]
     },
-    "/home/wayne/IdeaProjects/cs458-ChessDapp/contracts/gameownership.sol": {
-      "lastModificationDate": 1619788308503,
-      "contentHash": "47ecdd2aae7e0dff588f4b3467c8fbf4",
+    "C:\\Users\\School\\Documents\\Classes\\Spring2021\\CS458_Blockchain\\final_project\\latest_code\\cs458-ChessDapp\\contracts\\gameownership.sol": {
+      "lastModificationDate": 1619883028346,
+      "contentHash": "9abd94faa2f99e749634148701b50f1c",
       "sourceName": "contracts/gameownership.sol",
       "solcConfig": {
         "version": "0.5.1",
@@ -359,9 +325,9 @@
         "GameOwnership"
       ]
     },
-    "/home/wayne/IdeaProjects/cs458-ChessDapp/contracts/gamemove.sol": {
-      "lastModificationDate": 1619788308503,
-      "contentHash": "f0ef19b4a5914a856f9050e613b426eb",
+    "C:\\Users\\School\\Documents\\Classes\\Spring2021\\CS458_Blockchain\\final_project\\latest_code\\cs458-ChessDapp\\contracts\\gamemove.sol": {
+      "lastModificationDate": 1619883028346,
+      "contentHash": "c75c0c41687d6ef20a94f04c61c5db80",
       "sourceName": "contracts/gamemove.sol",
       "solcConfig": {
         "version": "0.5.1",
@@ -395,9 +361,43 @@
         "GameMove"
       ]
     },
-    "/home/wayne/IdeaProjects/cs458-ChessDapp/contracts/gamehelper.sol": {
-      "lastModificationDate": 1619788308503,
-      "contentHash": "dca9d70408fd1eb17225f800e5b4bd07",
+    "C:\\Users\\School\\Documents\\Classes\\Spring2021\\CS458_Blockchain\\final_project\\latest_code\\cs458-ChessDapp\\contracts\\erc721.sol": {
+      "lastModificationDate": 1619883028346,
+      "contentHash": "b4ecebe9371fab09be834ee23a24f40a",
+      "sourceName": "contracts/erc721.sol",
+      "solcConfig": {
+        "version": "0.5.1",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0 <0.6.0"
+      ],
+      "artifacts": [
+        "ERC721"
+      ]
+    },
+    "C:\\Users\\School\\Documents\\Classes\\Spring2021\\CS458_Blockchain\\final_project\\latest_code\\cs458-ChessDapp\\contracts\\gamehelper.sol": {
+      "lastModificationDate": 1619883028346,
+      "contentHash": "f79aa14f126594cd808fd8f9bfacee00",
       "sourceName": "contracts/gamehelper.sol",
       "solcConfig": {
         "version": "0.5.1",
@@ -431,9 +431,9 @@
         "GameHelper"
       ]
     },
-    "/home/wayne/IdeaProjects/cs458-ChessDapp/contracts/gamemodifiers.sol": {
-      "lastModificationDate": 1619788308503,
-      "contentHash": "e61d0c9624b4a9cadf030b34a86e7963",
+    "C:\\Users\\School\\Documents\\Classes\\Spring2021\\CS458_Blockchain\\final_project\\latest_code\\cs458-ChessDapp\\contracts\\gamemodifiers.sol": {
+      "lastModificationDate": 1619883028346,
+      "contentHash": "6d6ed82808b1c1faed1100190a694d2c",
       "sourceName": "contracts/gamemodifiers.sol",
       "solcConfig": {
         "version": "0.5.1",
@@ -467,9 +467,9 @@
         "GameModifiers"
       ]
     },
-    "/home/wayne/IdeaProjects/cs458-ChessDapp/contracts/ChessGame.sol": {
-      "lastModificationDate": 1619788308503,
-      "contentHash": "6232785e0514e8a7f465d910c3a1228f",
+    "C:\\Users\\School\\Documents\\Classes\\Spring2021\\CS458_Blockchain\\final_project\\latest_code\\cs458-ChessDapp\\contracts\\ChessGame.sol": {
+      "lastModificationDate": 1619883028346,
+      "contentHash": "29b6ab924db04adf033d0dda8e26b6e5",
       "sourceName": "contracts/ChessGame.sol",
       "solcConfig": {
         "version": "0.5.1",
