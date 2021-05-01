@@ -99,7 +99,8 @@ async function setLatestMoveLocal (OracleInstance, callerAddress, fenString, nex
     //const idInt = ethers.BigNumber.from(id); // Not sure what this line is doing?
 
     try {
-        await OracleInstance.setLatestMove(fenString, nextMove, callerAddress, id.toString())
+        await OracleInstance.setLatestMove(fenString, nextMove, callerAddress, id.toString());
+        //await OracleInstance.
     } catch (error) {
         console.log('Error encountered while calling setLatestMove.')
         // Do some error handling

@@ -70,7 +70,7 @@
       ]
     },
     "/home/wayne/IdeaProjects/cs458-ChessDapp/contracts/AppContract.sol": {
-      "lastModificationDate": 1619788596122,
+      "lastModificationDate": 1619823023124,
       "contentHash": "7f041f692d778707806b7aec4f94254b",
       "sourceName": "contracts/AppContract.sol",
       "solcConfig": {
@@ -108,7 +108,7 @@
       ]
     },
     "/home/wayne/IdeaProjects/cs458-ChessDapp/node_modules/hardhat/console.sol": {
-      "lastModificationDate": 1619788414855,
+      "lastModificationDate": 1619829186517,
       "contentHash": "cc4777addd464ea56fa35b1c45df0591",
       "sourceName": "hardhat/console.sol",
       "solcConfig": {
@@ -142,7 +142,7 @@
       ]
     },
     "/home/wayne/IdeaProjects/cs458-ChessDapp/contracts/OracleInterface.sol": {
-      "lastModificationDate": 1619788308503,
+      "lastModificationDate": 1619823023124,
       "contentHash": "b8c970adb6ec322f6c0797a199ca853f",
       "sourceName": "contracts/OracleInterface.sol",
       "solcConfig": {
@@ -176,8 +176,8 @@
       ]
     },
     "/home/wayne/IdeaProjects/cs458-ChessDapp/contracts/Oracle.sol": {
-      "lastModificationDate": 1619788596110,
-      "contentHash": "9563df6fcc55f35502558fc26eba984a",
+      "lastModificationDate": 1619837548095,
+      "contentHash": "9c782cd9009d70c09ce6bc1282ba2fe1",
       "sourceName": "contracts/Oracle.sol",
       "solcConfig": {
         "version": "0.5.1",
@@ -204,6 +204,7 @@
       "imports": [
         "hardhat/console.sol",
         "./AppContractInterface.sol",
+        "./gamemoveInterface.sol",
         "./ownable.sol"
       ],
       "versionPragmas": [
@@ -214,7 +215,7 @@
       ]
     },
     "/home/wayne/IdeaProjects/cs458-ChessDapp/contracts/AppContractInterface.sol": {
-      "lastModificationDate": 1619788308502,
+      "lastModificationDate": 1619823023124,
       "contentHash": "b916373a2d97adb56adc2e966e3cf87a",
       "sourceName": "contracts/AppContractInterface.sol",
       "solcConfig": {
@@ -247,8 +248,153 @@
         "AppContractInterface"
       ]
     },
+    "/home/wayne/IdeaProjects/cs458-ChessDapp/contracts/gamemoveInterface.sol": {
+      "lastModificationDate": 1619827871477,
+      "contentHash": "88038239948ad4aac3281a5d7efbf8f8",
+      "sourceName": "contracts/gamemoveInterface.sol",
+      "solcConfig": {
+        "version": "0.5.1",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0 <0.6.0"
+      ],
+      "artifacts": [
+        "gamemoveInterface"
+      ]
+    },
+    "/home/wayne/IdeaProjects/cs458-ChessDapp/contracts/gamemove.sol": {
+      "lastModificationDate": 1619837513745,
+      "contentHash": "1e36b73b77da54dbe39b3432d3fcff7f",
+      "sourceName": "contracts/gamemove.sol",
+      "solcConfig": {
+        "version": "0.5.1",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./gamehelper.sol",
+        "hardhat/console.sol",
+        "./OracleInterface.sol",
+        "./ownable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.5.0 <0.6.0"
+      ],
+      "artifacts": [
+        "GameMove"
+      ]
+    },
+    "/home/wayne/IdeaProjects/cs458-ChessDapp/contracts/gamehelper.sol": {
+      "lastModificationDate": 1619823023124,
+      "contentHash": "dca9d70408fd1eb17225f800e5b4bd07",
+      "sourceName": "contracts/gamehelper.sol",
+      "solcConfig": {
+        "version": "0.5.1",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./gamemodifiers.sol"
+      ],
+      "versionPragmas": [
+        ">=0.5.0 <0.6.0"
+      ],
+      "artifacts": [
+        "GameHelper"
+      ]
+    },
+    "/home/wayne/IdeaProjects/cs458-ChessDapp/contracts/gamemodifiers.sol": {
+      "lastModificationDate": 1619823023124,
+      "contentHash": "e61d0c9624b4a9cadf030b34a86e7963",
+      "sourceName": "contracts/gamemodifiers.sol",
+      "solcConfig": {
+        "version": "0.5.1",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./gamefactory.sol"
+      ],
+      "versionPragmas": [
+        ">=0.5.0 <0.6.0"
+      ],
+      "artifacts": [
+        "GameModifiers"
+      ]
+    },
     "/home/wayne/IdeaProjects/cs458-ChessDapp/contracts/gamefactory.sol": {
-      "lastModificationDate": 1619788308503,
+      "lastModificationDate": 1619823023124,
       "contentHash": "a0b47aa0247bb52ce33958540ca122a1",
       "sourceName": "contracts/gamefactory.sol",
       "solcConfig": {
@@ -285,7 +431,7 @@
       ]
     },
     "/home/wayne/IdeaProjects/cs458-ChessDapp/contracts/safemath.sol": {
-      "lastModificationDate": 1619788308503,
+      "lastModificationDate": 1619823023124,
       "contentHash": "0ef51fdc6c39c45a88004259a60d1857",
       "sourceName": "contracts/safemath.sol",
       "solcConfig": {
@@ -322,7 +468,7 @@
       ]
     },
     "/home/wayne/IdeaProjects/cs458-ChessDapp/contracts/gameownership.sol": {
-      "lastModificationDate": 1619788308503,
+      "lastModificationDate": 1619823023124,
       "contentHash": "47ecdd2aae7e0dff588f4b3467c8fbf4",
       "sourceName": "contracts/gameownership.sol",
       "solcConfig": {
@@ -359,116 +505,8 @@
         "GameOwnership"
       ]
     },
-    "/home/wayne/IdeaProjects/cs458-ChessDapp/contracts/gamemove.sol": {
-      "lastModificationDate": 1619788308503,
-      "contentHash": "f0ef19b4a5914a856f9050e613b426eb",
-      "sourceName": "contracts/gamemove.sol",
-      "solcConfig": {
-        "version": "0.5.1",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "./gamehelper.sol"
-      ],
-      "versionPragmas": [
-        ">=0.5.0 <0.6.0"
-      ],
-      "artifacts": [
-        "GameMove"
-      ]
-    },
-    "/home/wayne/IdeaProjects/cs458-ChessDapp/contracts/gamehelper.sol": {
-      "lastModificationDate": 1619788308503,
-      "contentHash": "dca9d70408fd1eb17225f800e5b4bd07",
-      "sourceName": "contracts/gamehelper.sol",
-      "solcConfig": {
-        "version": "0.5.1",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "./gamemodifiers.sol"
-      ],
-      "versionPragmas": [
-        ">=0.5.0 <0.6.0"
-      ],
-      "artifacts": [
-        "GameHelper"
-      ]
-    },
-    "/home/wayne/IdeaProjects/cs458-ChessDapp/contracts/gamemodifiers.sol": {
-      "lastModificationDate": 1619788308503,
-      "contentHash": "e61d0c9624b4a9cadf030b34a86e7963",
-      "sourceName": "contracts/gamemodifiers.sol",
-      "solcConfig": {
-        "version": "0.5.1",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "./gamefactory.sol"
-      ],
-      "versionPragmas": [
-        ">=0.5.0 <0.6.0"
-      ],
-      "artifacts": [
-        "GameModifiers"
-      ]
-    },
     "/home/wayne/IdeaProjects/cs458-ChessDapp/contracts/ChessGame.sol": {
-      "lastModificationDate": 1619788308503,
+      "lastModificationDate": 1619823023124,
       "contentHash": "6232785e0514e8a7f465d910c3a1228f",
       "sourceName": "contracts/ChessGame.sol",
       "solcConfig": {

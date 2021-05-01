@@ -17,6 +17,11 @@ async function main() {
     const OracleInstance = await OracleContractFactory.deploy();
     console.log("Oracle contract address:", OracleInstance.address);
 
+    const GameMoveContractFactory = await ethers.getContractFactory("GameMove");
+    const GameMoveInstance = await GameMoveContractFactory.deploy();
+    console.log("GameMove contract address:", GameMoveInstance.address);
+
+
     // set the oracle contract address inside the caller contract
     await AppInstance.setOracleInstanceAddress(OracleInstance.address);
 
