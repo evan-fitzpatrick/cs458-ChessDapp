@@ -1,6 +1,10 @@
 import { new_move } from "./chessboard_gui.js";
 import { COLOR } from "./src/cm-chessboard/Chessboard.js";
-import { chess_contract, provider, signer, userAddress } from "./init_blockchain.js";
+import initBlockchain from "./init_blockchain.js";
+
+const { chess_contract, provider, signer, userAddress } = await initBlockchain();
+
+//import { chess_contract, provider, signer, userAddress } from "./init_blockchain.js";
 
 // global variables (default values)
 var player_color = COLOR.white;

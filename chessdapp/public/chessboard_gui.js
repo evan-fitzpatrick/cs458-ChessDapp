@@ -71,9 +71,11 @@ function new_move(my_color, game_id, fen_string, contract_handle) {
 
                     if (was_valid) {
                         let fen_state = chess.fen();
-                        contract_handle.move(game_id, fen_state);
-                        console.log(`Submitted Move for ${game_id}: ${fen_state}`);
 
+                        // send move to contract
+                        contract_handle.makeMove(game_id, fen_state);
+
+                        console.log(`Submitted Move for ${game_id}: ${fen_state}`);
                         gameboard.removeMarkers();
                     }
 
