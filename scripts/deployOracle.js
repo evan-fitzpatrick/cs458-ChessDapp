@@ -17,6 +17,11 @@ async function main() {
     const OracleInstance = await OracleContractFactory.deploy();
     console.log("Oracle contract address:", OracleInstance.address);
 
+    const GameMoveContractFactory = await ethers.getContractFactory("GameMove");
+    const GameMoveInstance = await GameMoveContractFactory.deploy();
+    console.log("GameMove contract address:", GameMoveInstance.address);
+
+
     // set the oracle contract address inside the caller contract
     await AppInstance.setOracleInstanceAddress(OracleInstance.address);
 
@@ -36,5 +41,3 @@ Account balance: 100000000000000000000
 Caller contract address: 0xE1c05e124DA1610B9210051fC719f6E85E3a50A1
 Oracle contract address: 0xA47Ef501Fd446473A8D5B4c4cA3370E7ae7F19b0
 */
-
-
