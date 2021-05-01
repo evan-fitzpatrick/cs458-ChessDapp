@@ -433,13 +433,17 @@ const contract_abi = [
 ];
 
 async function initBlockchain() {
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
-    const signer = await provider.getSigner();
-    const userAddress = await signer.getAddress();
+    return new Promise(async (resolve, reject) => {
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        const signer = await provider.getSigner();
+        const userAddress = await signer.getAddress();
 
-    const chess_contract = new ethers.Contract(contract_address, contract_abi, signer);
+        const chess_contract = new ethers.Contract(contract_address, contract_abi, signer);
 
-    return { chess_contract, provider, signer, userAddress };
+        const contract_data = { chess_contract, provider, signer, userAddress };
+
+        resolve(contract_data);
+    })
 };
 
 export default initBlockchain;
