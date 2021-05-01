@@ -2,6 +2,7 @@ pragma solidity >=0.5.0 <0.6.0;
 
 import "hardhat/console.sol";  // for debugging
 import "./AppContractInterface.sol";
+import "./gamemoveInterface.sol";
 import "./ownable.sol";  // to get the Ownable "onlyOwner" modifier
 
 
@@ -30,9 +31,16 @@ contract Oracle is Ownable {
     function setLatestMove(string memory _fenString, string memory _nextMove, address _callerAddress, uint256 _id) public onlyOwner {
         require(pendingRequests[_id], "This request is not in my pending list.");
         delete pendingRequests[_id];  // once serviced, delete the request to save storage
-        AppContractInterface appContractInstance;
-        appContractInstance = AppContractInterface(_callerAddress);
-        appContractInstance.callback(_fenString, _nextMove, _id);
+
+        //AppContractInterface appContractInstance;
+        //appContractInstance = AppContractInterface(_callerAddress);
+        //appContractInstance.callback(_fenString, _nextMove, _id);
+        //emit SetLatestMoveEvent(_fenString, _nextMove, _callerAddress, _id);
+
+        gamemoveInterface GameMoveInstance;
+        GameMoveInstance = gamemoveInterface(_callerAddress);
+        GameMoveInstance.setPosition(_nextMove, _id);
         emit SetLatestMoveEvent(_fenString, _nextMove, _callerAddress, _id);
+
     }
 }
