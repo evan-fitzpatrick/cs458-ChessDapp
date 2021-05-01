@@ -214,8 +214,8 @@
       ]
     },
     "C:\\Users\\School\\Documents\\Classes\\Spring2021\\CS458_Blockchain\\final_project\\latest_code\\cs458-ChessDapp\\contracts\\gamefactory.sol": {
-      "lastModificationDate": 1619883028346,
-      "contentHash": "aeceb712482c2c4c54b8aa6c2849e229",
+      "lastModificationDate": 1619899090978,
+      "contentHash": "2b00c955884063dc5efa97992362278f",
       "sourceName": "contracts/gamefactory.sol",
       "solcConfig": {
         "version": "0.5.1",
@@ -326,8 +326,8 @@
       ]
     },
     "C:\\Users\\School\\Documents\\Classes\\Spring2021\\CS458_Blockchain\\final_project\\latest_code\\cs458-ChessDapp\\contracts\\gamemove.sol": {
-      "lastModificationDate": 1619883028346,
-      "contentHash": "c75c0c41687d6ef20a94f04c61c5db80",
+      "lastModificationDate": 1619899046454,
+      "contentHash": "8701b1404f8cf8fcb214ad887f41a660",
       "sourceName": "contracts/gamemove.sol",
       "solcConfig": {
         "version": "0.5.1",

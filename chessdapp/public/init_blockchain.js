@@ -1,3 +1,4 @@
+//import { ethers } from "ethers";
 
 const contract_address = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
 const contract_abi = [
@@ -356,12 +357,12 @@ const contract_abi = [
         "anonymous": false,
         "inputs": [
             {
-                "indexed": false,
+                "indexed": true,
                 "name": "gameId",
                 "type": "uint256"
             },
             {
-                "indexed": false,
+                "indexed": true,
                 "name": "gamePosition",
                 "type": "string"
             }
@@ -400,12 +401,12 @@ const contract_abi = [
                 "type": "address"
             },
             {
-                "indexed": false,
+                "indexed": true,
                 "name": "player1",
                 "type": "address"
             },
             {
-                "indexed": false,
+                "indexed": true,
                 "name": "player2",
                 "type": "address"
             }
@@ -434,6 +435,8 @@ const contract_abi = [
 
 async function initBlockchain() {
     return new Promise(async (resolve, reject) => {
+        await window.ethereum.enable();
+
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         const signer = await provider.getSigner();
         const userAddress = await signer.getAddress();

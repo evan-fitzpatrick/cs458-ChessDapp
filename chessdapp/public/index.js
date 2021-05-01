@@ -36,7 +36,7 @@ function initialize_page() {
         // read and confirm player_2 address from text input
         const opponent_address = document.getElementById("other_player_address").value;
 
-        if (!ethers.utils.isAddress(opponent_address)) {
+        if (opponent_address != "" && !ethers.utils.isAddress(opponent_address)) {
             window.alert("Invalid Opponent address! (leave blank to play against Stockfish)");
             document.getElementById("other_player_address").value = "";
             return;
@@ -47,11 +47,11 @@ function initialize_page() {
     }
 
 
-    // NewGame Event : (game_id, sender, player1, player2)
+    // event NewGame(uint gameId, address owner, address player1, address player2);
 
     // Listen for a game I just started
     const my_game_filter = chess_contract.filters.NewGame(null, null, userAddress, null);
-    chess_contract.on(other_game_filter, (id, sender, player_1, player_2) => {
+    chess_contract.on(my_game_filter, (id, sender, player_1, player_2) => {
         game_id = id;
         player_color = COLOR.white;
 
