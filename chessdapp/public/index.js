@@ -12,6 +12,11 @@ var provider;
 var signer;
 var userAddress;
 
+const overrideOptions = {
+    gasLimit: 250000,
+};
+
+
 initBlockchain().then(contract_data => {
     chess_contract = contract_data.chess_contract;
     provider = contract_data.provider;
@@ -23,6 +28,9 @@ initBlockchain().then(contract_data => {
 
 // setup gui interactions and event listeners
 function initialize_page() {
+
+    console.log(chess_contract);
+    console.log(typeof userAddress);
 
     // wait for "start_new_game" button to be clicked
     document.getElementById("start_new_game").onclick = async (e) => {
@@ -42,8 +50,10 @@ function initialize_page() {
             return;
         }
 
+        console.log(opponent_address);
+
         // send a new game request to the contract
-        chess_contract.createGame(userAddress, opponent_address);
+        chess_contract.createGame(userAddress, opponent_address, overrideOptions);
     }
 
 

@@ -2426,13 +2426,13 @@
                 }
               ],
               "contractDependencies": [
-                54,
                 174,
-                273,
                 327,
                 383,
-                526,
-                635
+                635,
+                273,
+                54,
+                526
               ],
               "contractKind": "contract",
               "documentation": null,
@@ -6598,9 +6598,9 @@
               ],
               "contractDependencies": [
                 174,
-                273,
                 327,
-                635
+                635,
+                273
               ],
               "contractKind": "contract",
               "documentation": null,
@@ -7318,12 +7318,12 @@
                 }
               ],
               "contractDependencies": [
-                54,
                 174,
-                273,
                 327,
                 383,
-                635
+                635,
+                273,
+                54
               ],
               "contractKind": "contract",
               "documentation": null,

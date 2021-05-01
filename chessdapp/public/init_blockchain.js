@@ -443,7 +443,12 @@ async function initBlockchain() {
 
         const chess_contract = new ethers.Contract(contract_address, contract_abi, signer);
 
-        const contract_data = { chess_contract, provider, signer, userAddress };
+        const contract_data = {
+            "chess_contract": chess_contract,
+            "provider": provider,
+            "signer": signer,
+            "userAddress": userAddress
+        };
 
         resolve(contract_data);
     })
