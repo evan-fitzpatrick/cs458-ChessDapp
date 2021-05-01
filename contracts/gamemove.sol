@@ -26,6 +26,8 @@ contract GameMove is GameHelper {
         emit newOracleAddressEvent(oracleAddress);
     }
 
+    // This function needs to be passed a move.
+    // Right now it is set to default to stockfish.
     function makeMove(uint256 _gameId, string calldata _position) external onlyPlayerOf(_gameId) {
         //console.log("calling Oracle:");
         uint256 id = oracleInstance.getLatestMove('stockfish', _position);
